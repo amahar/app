@@ -1,0 +1,46 @@
+{
+	"version" : "1.0.0",
+	"path" : {
+		"_comment_" : "All directory paths should end with a trailing slash.",
+		"src"  : { 
+			"root"	 : "./src/", 
+			"js"	 : "./src/js/",
+			"css"	 : "./src/css/",
+			"sass"	 : "./src/scss/",
+			"sprite" : "./src/images/sprites/",
+			"images" : "./src/images/"
+		},
+		"dist" : { 
+			"root"	 : "./dist/",
+			"js"	 : "./dist/js/",
+			"css"	 : "./dist/css/",
+			"fonts"  : "./dist/fonts/",
+			"images" : "./dist/images/"
+		},
+		"glob" : {
+			"allfiles"	: "**/*.*",
+			"sassfiles" : "**/*.scss",
+			"jsfiles"	: "**/*.js",
+			"imgfiles"	: "**/*.{png,jpg,jpeg,gif,ico,svg}",
+			"cssfiles"	: "**/*.css",
+            "htmlfiles" : "**/*.html"
+		}
+	},
+	"browser" : {
+		"support" : [
+			"last 2 versions",
+			"safari >= 8",
+			"ie >= 9",
+			"ff >= 20",
+			"ios 6",
+			"android 4"
+		]
+	},
+	"js" : {
+		"_comment_" : "entryfile is the path relative to the js directory specified above and should not start with a forward slash /",
+		"entryfile" : "main.js",
+		"outfile" : "main.min.js",
+		"debug" : true
+	}
+	
+}

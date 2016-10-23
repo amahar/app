@@ -1,0 +1,75 @@
+{
+  "name": "embraer-proto",
+  "version": "1.0.0",
+  "description": "Embraer Prototype",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git@git.icrossing.net:web-development/embraer-proto.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "setup": "echo \"Setting up Project\" && npm run hooks && npm install && exit 0",
+    "hooks": "echo \"Installing git-hooks ...\" && cp ./setup/hooks/post-merge ./.git/hooks/post-merge && chmod +x ./.git/hooks/post-merge && exit 0",
+    "start": "echo \"Building and Running Dev Server\" && gulp && exit 0",
+    "build": "gulp build",
+    "deploy": "gulp deploy"
+  },
+  "author": "UI.Reston",
+  "license": "BSD-2-Clause",
+  "keywords": [
+    "embraer",
+    "prototype",
+    "client-work"
+  ],
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "browserify-shim": "^3.8.12",
+    "del": "^2.2.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-bump": "^2.1.0",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-data": "^1.2.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-iconfont": "^8.0.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-sass": "^2.3.1",
+    "gulp-scss-lint": "^0.4.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-swig": "^0.8.0",
+    "gulp-uglify": "^1.5.4",
+    "gulp-util": "^3.0.7",
+    "gulp-webserver": "^0.9.1",
+    "gulp.spritesmith": "^6.2.1",
+    "lodash.assign": "^4.0.9",
+    "merge": "^1.2.0",
+    "merge-stream": "^1.0.0",
+    "swig": "^1.4.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-paths": "^2.1.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  },
+  "browser": {
+      "waypoints": "./node_modules/waypoints/lib/noframework.waypoints.js"
+  },
+  "browserify-shim": {
+    "jQuery": "global:jQuery",
+    "waypoints": {
+      "exports": "waypoints"
+    }
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "normalize.css": "^4.2.0",
+    "slick-carousel": "^1.6.0",
+    "waypoints": "^4.0.1"
+  }
+}

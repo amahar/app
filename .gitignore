@@ -1,0 +1,7 @@
+.DS_Store
+npm-debug.log
+/src
+/gulp-admin
+/ixf-admin
+/node_modules
+/src_bak
